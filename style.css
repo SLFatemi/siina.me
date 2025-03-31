@@ -1,0 +1,147 @@
+:root {
+    --primary-color: #4A4947;
+    --secondary-color: #B17457;
+    --main-white: #D8D2C2;
+    --main-gray: #434240;
+    --muted-gray: #80807E;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Georama', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 580px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 3fr 1fr 1fr 3fr;
+    column-gap: 2.2rem;
+    /*background-color: orangered;*/
+    transform: translateX(-20%);
+}
+
+.section-img {
+    grid-column: 2;
+    margin-bottom: 5rem;
+}
+
+.main-img {
+    height: 14rem;
+    border-radius: 100%;
+    border: 6px solid var(--main-gray);
+    margin-bottom: 0.6rem;
+}
+
+.name-links {
+    display: flex;
+    align-items: end;
+    gap: 1rem
+}
+
+.name {
+    font-size: 5.4rem;
+    font-weight: 600;
+    color: var(--main-white);
+}
+
+.sm-space {
+    font-size: 3.2rem;
+}
+
+.description {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--main-white);
+    letter-spacing: 1.3px;
+}
+
+.social-links {
+    list-style: none;
+    margin-bottom: 0.75rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.link-icon {
+    height: 2.2rem;
+    fill: var(--muted-gray);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        fill: var(--secondary-color)
+    }
+}
+
+.section-name {
+    color: var(--muted-gray);
+    font-size: 1.5rem;
+    font-weight: 600;
+    justify-self: end;
+    margin-top: 0.3rem;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.section-description {
+    color: var(--main-white);
+    font-size: 1.8rem;
+    letter-spacing: 1.4px;
+    line-height: 1.4;
+}
+
+.skill {
+    background-color: var(--main-gray);
+    width: 11rem;
+    height: 13rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1.4rem;
+    transition: all 0.3s;
+
+    &:hover {
+        transform: translateY(-3px);
+        /*outline: 4px solid var(--secondary-color);*/
+    }
+}
+
+.skill-icon {
+    fill: var(--secondary-color);
+    height: 5.4rem;
+}
+
+
+.skill-name {
+    font-family: 'figtree', sans-serif;
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1rem;
+}
