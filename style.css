@@ -32,7 +32,13 @@ body {
     grid-template-rows: 3fr 1fr 1fr 3fr;
     column-gap: 2.2rem;
     /*background-color: orangered;*/
-    transform: translateX(-20%);
+    /*transform: translateX(-20%);*/
+    transition: all 1s;
+}
+
+.container--hidden {
+    opacity: 0;
+    transform: translateY(2rem);
 }
 
 .section-img {

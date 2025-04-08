@@ -1,2 +1,3 @@
 'use strict'
-console.log((5 ?? 0) * 10)
+const containerEl = document.querySelector('.container')
+setTimeout(() => containerEl.classList.remove('container--hidden'), 1000)
