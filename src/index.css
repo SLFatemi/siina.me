@@ -1,0 +1,81 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 700;
+    src: url('assets/figtree-v7-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 300;
+    src: url('assets/georama-v13-latin-300.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/georama-v13-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 600;
+    src: url('assets/georama-v13-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Georama';
+    font-style: normal;
+    font-weight: 700;
+    src: url('assets/georama-v13-latin-700.woff2') format('woff2');
+}
+
+
+:root {
+
+    font-family: 'Georama', sans-serif;
+    color-scheme: light dark;
+
+    --primary-color: #232831;
+    --secondary-color: #AF83D0;
+    --main-white: #EBE2F4;
+    --main-gray: #191D24;
+    --muted-gray: #4B596C;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+    padding-bottom: 2px;
+    border-bottom: 3px solid #B17457;
+}
+
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Georama', sans-serif;
+}
