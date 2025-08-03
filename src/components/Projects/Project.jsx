@@ -1,4 +1,5 @@
 import GithubButton from "./GithubButton.jsx";
+import UrlButton from "./UrlButton.jsx";
 
 function Project({project}) {
     return <div key={project.title} className="project-card">
@@ -9,7 +10,10 @@ function Project({project}) {
                 <span key={tag} className="tag">{tag}</span>
             ))}
         </div>
-        <GithubButton link={project.link}/>
+        <div className={'buttons'}>
+            <GithubButton link={project.link}/>
+            {project.url && <UrlButton link={project.url}/>}
+        </div>
     </div>
 }
 

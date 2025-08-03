@@ -32,8 +32,23 @@ const projects = [
         title: 'SIINA.ME',
         description: 'This particular Website',
         tags: ['React.js', 'Figma'],
-        link: 'https://github.com/SLFatemi/siina.me'
-    }
+        link: 'https://github.com/SLFatemi/siina.me',
+    },
+    {
+        title: 'Forkify',
+        description: 'A recipe web app using the Forkify API to allow users to search, view, modify, bookmark and add recipes.',
+        tags: ['Javascript', 'Course-Project'],
+        link: 'https://github.com/SLFatemi/Forkify',
+        url: 'https://forkiify.pages.dev/',
+    },
+    {
+        title: 'usePopcorn',
+        description: 'An application that provides users with a way to explore movies, rate them, and manage their watched movies list.',
+        tags: ['React.js', 'Course-Project'],
+        link: 'https://github.com/SLFatemi/usePopcorn',
+        url: 'https://usepopcorn-dlg.pages.dev/',
+    },
+
 ];
 
 

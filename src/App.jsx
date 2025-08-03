@@ -2,20 +2,7 @@ import './App.css'
 import Intro from "./components/Intro.jsx";
 import TextSection from "./components/TextSection.jsx";
 import Skills from "./components/Skills.jsx";
-import {FaHtml5, FaCss3Alt, FaReact} from "react-icons/fa";
-import {IoLogoJavascript, IoLogoPython} from "react-icons/io5";
-import {IoIosBrush} from "react-icons/io";
 import Projects from "./components/Projects/Projects.jsx";
-
-
-const skillsList = [
-    {name: 'HTML5', svg: FaHtml5},
-    {name: 'CSS3', svg: FaCss3Alt},
-    {name: 'Javascript', svg: IoLogoJavascript},
-    {name: 'React.js', svg: FaReact},
-    {name: 'Pyhton', svg: IoLogoPython},
-    {name: 'Graphic Design', svg: IoIosBrush},
-]
 
 function App() {
     return (
@@ -33,7 +20,7 @@ function App() {
                     description: "I’m currently majoring in Computer Science at Iran University of Science and Technology (IUST)"
                 }
             }</TextSection>
-            <Skills skillsList={skillsList}/>
+            <Skills/>
             <Projects/>
         </div>
     )

@@ -64,6 +64,12 @@ $githubBorder: #EBE2F4;
   }
 }
 
+
+.project-card .buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .see-more {
   display: flex;
   align-items: center;
