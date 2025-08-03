@@ -1,6 +1,7 @@
 import Masonry from 'react-masonry-css';
 import './Projects.scss'
 import Project from "./Project.jsx";
+import SeeMoreButton from "./SeeMoreButton.jsx";
 
 const breakpointColumnsObj = {
     default: 2,
@@ -52,6 +53,7 @@ function Projects() {
                     <Project key={p.title} project={p}/>
                 ))}
             </Masonry>
+            <SeeMoreButton link={'https://github.com/SLFatemi/'}/>
         </section>
     </>
 }
