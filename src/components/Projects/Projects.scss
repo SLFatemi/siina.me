@@ -57,4 +57,10 @@ $githubBorder: #EBE2F4;
   padding: 0.5rem 0.6rem;
   font-size: 1.3rem;
   font-weight: 700;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: translateY(-3px);
+    /*outline: 4px solid var(--secondary-color);*/
+  }
 }
