@@ -5,6 +5,7 @@ import Skills from "./components/Skills.jsx";
 import {FaHtml5, FaCss3Alt, FaReact} from "react-icons/fa";
 import {IoLogoJavascript, IoLogoPython} from "react-icons/io5";
 import {IoIosBrush} from "react-icons/io";
+import Projects from "./components/Projects/Projects.jsx";
 
 
 const skillsList = [
@@ -33,6 +34,7 @@ function App() {
                 }
             }</TextSection>
             <Skills skillsList={skillsList}/>
+            <Projects/>
         </div>
     )
 }
