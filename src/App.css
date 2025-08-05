@@ -131,7 +131,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     row-gap: 0.6rem;
-    /*column-gap: 0.6rem;*/
+    column-gap: 0.6rem;
+    width: min-content;
 }
 
 @media (max-width: 768px) {

@@ -5,7 +5,7 @@ function GithubButton({link}) {
         window.open(link, '_blank', 'noopener,noreferrer');
     };
     return <button onClick={openInNewTab} type={'button'}>
-        <span>Github</span>
+        {/*<span>Github</span>*/}
         <FaGithub size={20}/>
     </button>
 }
