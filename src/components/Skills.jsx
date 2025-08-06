@@ -21,7 +21,7 @@ function Skills() {
             <div className="section-description">
                 <div className="skills">
                     {skillsList.map(skill => {
-                        return <Skill name={skill.name} svg={skill.svg}/>
+                        return <Skill name={skill.name} svg={skill.svg} key={skill.name}/>
                     })}
                 </div>
             </div>

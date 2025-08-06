@@ -75,6 +75,7 @@
     --main-white: #EBE2F4;
     --main-gray: #191D24;
     --muted-gray: #4B596C;
+    --extra-muted-gray: rgba(75, 89, 108, 0.5);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;

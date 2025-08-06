@@ -24,7 +24,7 @@ function Intro() {
                 </li>
             </ul>
         </div>
-        <div className="description">Front-End enthusiast</div>
+        <div className="description">Front-End Developer</div>
     </section>
 }
 

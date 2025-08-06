@@ -3,6 +3,7 @@ import Intro from "./components/Intro.jsx";
 import TextSection from "./components/TextSection.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects/Projects.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
     return (
@@ -11,7 +12,8 @@ function App() {
             <TextSection>{
                 {
                     name: "About",
-                    description: "Hey 👋, I’m Sina a 19 y/o CS student eager to learn Front-End development"
+                    description: `Hey 👋, I’m Sina a 19 y/o Software Engineer eager to learn more about Front-End technologies.
+                       I try to build interfaces that feel as good as they look, from pixel-perfect designs in Figma to live, responsive apps in the browser`
                 }
             }</TextSection>
             <TextSection>{
@@ -22,6 +24,7 @@ function App() {
             }</TextSection>
             <Skills/>
             <Projects/>
+            <Footer/>
         </div>
     )
 }

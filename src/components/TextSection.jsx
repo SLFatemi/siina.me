@@ -1,12 +1,12 @@
 function TextSection({children}) {
     return <>
-        <div className="section-name --about">
+        <div className="section-name">
             {children.name}
         </div>
-        <section className="section --about">
-            <div className="section-description --about">
+        <section>
+            <p className="section-description">
                 {children.description}
-            </div>
+            </p>
         </section>
     </>
 }

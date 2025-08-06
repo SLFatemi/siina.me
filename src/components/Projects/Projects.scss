@@ -1,4 +1,6 @@
-$githubBorder: #EBE2F4;
+.projects {
+  transition: all 0.3s;
+}
 
 .masonry-grid {
   display: flex;
@@ -50,7 +52,7 @@ $githubBorder: #EBE2F4;
   transition: all 0.3s;
 
   &:hover {
-    background-color: darken(#AF83D0, 10%); // 10% darker
+    background-color: darken(#AF83D0, 10%);
   }
 }
 
