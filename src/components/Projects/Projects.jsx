@@ -10,18 +10,6 @@ const breakpointColumnsObj = {
 
 const projects = [
     {
-        title: 'CSHOT',
-        description: 'A fast-paced two player shooting game',
-        tags: ['Python', 'Pygame'],
-        link: 'https://github.com/SLFatemi/CShot'
-    },
-    {
-        title: 'WALL WIZARD',
-        description: 'A Precise Implementation of the Quoridor board game',
-        tags: ['Python'],
-        link: 'https://github.com/SLFatemi/WallWizard'
-    },
-    {
         title: 'CODE SCRAPPER',
         description:
             'A modular platform for real estate data collection, processing, and analysis',
@@ -47,6 +35,18 @@ const projects = [
         tags: ['React.js', 'Course-Project'],
         link: 'https://github.com/SLFatemi/usePopcorn',
         url: 'https://usepopcorn-dlg.pages.dev/',
+    },
+    {
+        title: 'CSHOT',
+        description: 'A fast-paced two player shooting game',
+        tags: ['Python', 'Pygame'],
+        link: 'https://github.com/SLFatemi/CShot'
+    },
+    {
+        title: 'WALL WIZARD',
+        description: 'A Precise Implementation of the Quoridor board game',
+        tags: ['Python'],
+        link: 'https://github.com/SLFatemi/WallWizard'
     },
 
 ];
