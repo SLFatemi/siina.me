@@ -42,7 +42,7 @@ function App() {
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{once: true, amount: 0.2}}
+                        viewport={{once: true, amount: 0.1}}
                         variants={glideInVariant}
                         transition={{duration: 0.3, ease: "easeOut", delay: i <= 2 ? (i + 1) * 0.3 : 0}}
                     >
