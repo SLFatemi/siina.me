@@ -1,5 +1,5 @@
 import Masonry from 'react-masonry-css';
-import './Projects.scss'
+import './_Projects.scss'
 import Project from "./Project.jsx";
 import SeeMoreButton from "./SeeMoreButton.jsx";
 
@@ -8,16 +8,17 @@ const breakpointColumnsObj = {
     768: 1
 };
 
+
 const projects = [
     {
-        title: 'CODE SCRAPPER',
+        title: 'Code Scrapper',
         description:
             'A modular platform for real estate data collection, processing, and analysis',
         tags: ['Python', 'FastAPI', 'Javascript', 'RabbitMQ'],
         link: 'https://github.com/SLFatemi/CodeScraper'
     },
     {
-        title: 'SIINA.ME',
+        title: 'Siina.me',
         description: 'This particular Website',
         tags: ['React.js', 'Figma'],
         link: 'https://github.com/SLFatemi/siina.me',
@@ -37,13 +38,13 @@ const projects = [
         url: 'https://usepopcorn-dlg.pages.dev/',
     },
     {
-        title: 'CSHOT',
+        title: 'CShot',
         description: 'A fast-paced two player shooting game',
         tags: ['Python', 'Pygame'],
         link: 'https://github.com/SLFatemi/CShot'
     },
     {
-        title: 'WALL WIZARD',
+        title: 'Wall Wizard',
         description: 'A Precise Implementation of the Quoridor board game',
         tags: ['Python'],
         link: 'https://github.com/SLFatemi/WallWizard'
@@ -53,7 +54,7 @@ const projects = [
 
 
 function Projects() {
-    return <>
+    return <div className={'section-container'}>
         <div className="section-name --projects">
             Projects
         </div>
@@ -70,7 +71,7 @@ function Projects() {
             </Masonry>
             <SeeMoreButton link={'https://github.com/SLFatemi/'}/>
         </section>
-    </>
+    </div>
 }
 
 export default Projects

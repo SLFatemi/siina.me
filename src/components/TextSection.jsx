@@ -1,5 +1,5 @@
 function TextSection({children}) {
-    return <>
+    return <div className={'section-container'}>
         <div className="section-name">
             {children.name}
         </div>
@@ -8,7 +8,7 @@ function TextSection({children}) {
                 {children.description}
             </p>
         </section>
-    </>
+    </div>
 }
 
 export default TextSection

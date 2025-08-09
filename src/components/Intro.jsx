@@ -1,12 +1,29 @@
+import {motion} from "framer-motion";
+
 import profilePicture from '../assets/pfp.png'
 import {FaLinkedin, FaGithub, FaTelegram} from "react-icons/fa";
+import TypeIt from "typeit-react";
 
-function Intro() {
+function Intro({doneWriting, setDoneWriting}) {
+
     return <section className="section-img">
-        <img src={profilePicture} alt={"Sina Fatemi's picture"} className="main-img"/>
+        <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{duration: 0.3, ease: "easeIn"}}
+        >
+            <img src={profilePicture} alt={"Sina Fatemi's picture"} className="main-img"/>
+        </motion.div>
         <div className="name-links">
-            <div className="name">Sina<span className="sm-space"> </span>Fatemi</div>
-            <ul className="social-links">
+            <TypeIt options={{
+                afterComplete: (instance) => {
+                    instance.destroy()
+                    setTimeout(() => {
+                        setDoneWriting(true)
+                    }, 200)
+                }
+            }} className="name">Sina<span className="sm-space"> </span>Fatemi</TypeIt>
+            {doneWriting && <ul className="social-links">
                 <li>
                     <a className="link" href="https://www.linkedin.com/in/sinafatemi">
                         <FaLinkedin className={'link-icon'} size={20}/>
@@ -22,9 +39,9 @@ function Intro() {
                         <FaTelegram className={'link-icon'} size={20}/>
                     </a>
                 </li>
-            </ul>
+            </ul>}
         </div>
-        <div className="description">Front-End Developer</div>
+        <div className={`description ${!doneWriting && '--hidden'}`}>Front-End Developer</div>
     </section>
 }
 

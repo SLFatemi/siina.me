@@ -13,7 +13,7 @@ const skillsList = [
 ]
 
 function Skills() {
-    return <>
+    return <div className={'section-container'}>
         <div className="section-name --skills">
             Skills
         </div>
@@ -26,7 +26,7 @@ function Skills() {
                 </div>
             </div>
         </section>
-    </>
+    </div>
 
 }
 
