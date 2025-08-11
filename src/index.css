@@ -1,109 +1,103 @@
 @font-face {
-    font-display: swap;
-    font-family: 'Figtree';
-    font-style: normal;
-    font-weight: 300;
-    src: url('assets/figtree-v8-latin-300.woff2') format('woff2');
-}
-
-
-@font-face {
-    font-display: swap;
-    font-family: 'Figtree';
-    font-style: normal;
-    font-weight: 600;
-    src: url('assets/figtree-v8-latin-600.woff2') format('woff2');
+	font-display: swap;
+	font-family: "Figtree";
+	font-style: normal;
+	font-weight: 300;
+	src: url("assets/figtree-v8-latin-300.woff2") format("woff2");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Figtree';
-    font-style: normal;
-    font-weight: 700;
-    src: url('assets/figtree-v7-latin-700.woff2') format('woff2');
+	font-display: swap;
+	font-family: "Figtree";
+	font-style: normal;
+	font-weight: 600;
+	src: url("assets/figtree-v8-latin-600.woff2") format("woff2");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Figtree';
-    font-style: normal;
-    font-weight: 800;
-    src: url('assets/figtree-v8-latin-800.woff2') format('woff2');
-}
-
-
-@font-face {
-    font-display: swap;
-    font-family: 'Georama';
-    font-style: normal;
-    font-weight: 300;
-    src: url('assets/georama-v13-latin-300.woff2') format('woff2');
+	font-display: swap;
+	font-family: "Figtree";
+	font-style: normal;
+	font-weight: 700;
+	src: url("assets/figtree-v7-latin-700.woff2") format("woff2");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Georama';
-    font-style: normal;
-    font-weight: 400;
-    src: url('assets/georama-v13-latin-regular.woff2') format('woff2');
+	font-display: swap;
+	font-family: "Figtree";
+	font-style: normal;
+	font-weight: 800;
+	src: url("assets/figtree-v8-latin-800.woff2") format("woff2");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Georama';
-    font-style: normal;
-    font-weight: 600;
-    src: url('assets/georama-v13-latin-600.woff2') format('woff2');
+	font-display: swap;
+	font-family: "Georama";
+	font-style: normal;
+	font-weight: 300;
+	src: url("assets/georama-v13-latin-300.woff2") format("woff2");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Georama';
-    font-style: normal;
-    font-weight: 700;
-    src: url('assets/georama-v13-latin-700.woff2') format('woff2');
+	font-display: swap;
+	font-family: "Georama";
+	font-style: normal;
+	font-weight: 400;
+	src: url("assets/georama-v13-latin-regular.woff2") format("woff2");
 }
 
+@font-face {
+	font-display: swap;
+	font-family: "Georama";
+	font-style: normal;
+	font-weight: 600;
+	src: url("assets/georama-v13-latin-600.woff2") format("woff2");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Georama";
+	font-style: normal;
+	font-weight: 700;
+	src: url("assets/georama-v13-latin-700.woff2") format("woff2");
+}
 
 :root {
+	font-family: "Georama", sans-serif;
+	color-scheme: light dark;
 
-    font-family: 'Georama', sans-serif;
-    color-scheme: light dark;
+	--primary-color: #232831;
+	--secondary-color: #af83d0;
+	--main-white: #ebe2f4;
+	--main-gray: #191d24;
+	--muted-gray: #4b596c;
+	--extra-muted-gray: rgba(75, 89, 108, 0.5);
 
-    --primary-color: #232831;
-    --secondary-color: #AF83D0;
-    --main-white: #EBE2F4;
-    --main-gray: #191D24;
-    --muted-gray: #4B596C;
-    --extra-muted-gray: rgba(75, 89, 108, 0.5);
-
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-y: scroll;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-y: scroll;
 }
 
-
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 *:focus {
-    outline: none;
-    padding-bottom: 2px;
-    border-bottom: 3px solid var(--secondary-color);
+	outline: none;
+	padding-bottom: 2px;
+	border-bottom: 3px solid var(--secondary-color);
 }
 
 html {
-    font-size: 10px;
-    overflow-x: hidden;
+	font-size: 10px;
+	overflow-x: hidden;
 }
 
-
 body {
-    background-color: var(--primary-color);
-    font-family: 'Georama', sans-serif;
+	background-color: var(--primary-color);
+	font-family: "Georama", sans-serif;
 }
