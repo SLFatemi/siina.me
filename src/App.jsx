@@ -5,7 +5,7 @@ import { useState } from "react";
 import Footer from "./components/Footer.jsx";
 import Intro from "./components/Intro.jsx";
 import Projects from "./components/Projects/Projects.jsx";
-import Skills from "./components/Skills.jsx";
+import Skills from "./components/Skills/Skills.jsx";
 import TextSection from "./components/TextSection.jsx";
 
 const glideInVariant = {
@@ -48,7 +48,7 @@ function App() {
 							transition={{
 								duration: 0.3,
 								ease: "easeOut",
-								delay: i <= 2 ? (i + 1) * 0.3 : 0,
+								delay: i <= 3 ? (i + 1) * 0.3 : 0,
 							}}
 							key={Component.key}
 						>
