@@ -173,6 +173,33 @@ footer p span {
 	opacity: 0;
 }
 
+.dark {
+	--primary-color: #232831;
+	--secondary-color: #af83d0;
+	--main-white: #ebe2f4;
+	--main-gray: #191d24;
+	--muted-gray: #4b596c;
+	--extra-muted-gray: rgba(75, 89, 108, 0.5);
+}
+
+.dark-mode-btn {
+	position: absolute;
+	top: 4.25rem;
+	right: 4.25rem;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: var(--main-white);
+}
+
+@media (prefers-color-scheme: dark) {
+	.skill {
+		&:hover {
+			filter: brightness(0.98);
+		}
+	}
+}
+
 @media (max-width: 768px) {
 	.container {
 		display: flex;
@@ -226,5 +253,10 @@ footer p span {
 		display: flex;
 		flex-direction: column;
 		row-gap: 1rem;
+	}
+
+	.dark-mode-btn {
+		top: 2.55rem;
+		right: 2.55rem;
 	}
 }

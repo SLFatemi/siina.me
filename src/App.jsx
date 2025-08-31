@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import "./App.css";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import DarkModeButton from "./components/DarkModeButton.jsx";
 import Footer from "./components/Footer.jsx";
 import Intro from "./components/Intro.jsx";
 import Projects from "./components/Projects/Projects.jsx";
@@ -15,6 +16,20 @@ const glideInVariant = {
 
 function App() {
 	const [doneWriting, setDoneWriting] = useState(false);
+	const [isLight, setIsLight] = useState(false);
+
+	const bodyEl = useRef(document.querySelector("body"));
+
+	function handleChangeColorScheme() {
+		setIsLight((cur) => !cur);
+	}
+
+	useEffect(() => {
+		!isLight
+			? bodyEl.current.classList.add("dark")
+			: bodyEl.current.classList.remove("dark");
+	}, [isLight]);
+
 	const componentsArray = [
 		<TextSection key={"About"}>
 			{{
@@ -36,19 +51,30 @@ function App() {
 
 	return (
 		<div className="container">
-			<Intro doneWriting={doneWriting} setDoneWriting={setDoneWriting} />
+			<DarkModeButton
+				onChangeColorScheme={handleChangeColorScheme}
+				isLight={isLight}
+			/>
+			<Intro
+				doneWriting={doneWriting}
+				setDoneWriting={setDoneWriting}
+				isLight={isLight}
+			/>
 			{doneWriting && (
 				<>
 					{componentsArray.map((Component, i) => (
 						<motion.div
 							initial="hidden"
-							whileInView="visible"
-							viewport={{ once: true, amount: 0.1 }}
+							animate="visible"
+							// Removed staggered list animation
+
+							// whileInView="visible"
+							// viewport={{ once: true, amount: 0.1 }}
 							variants={glideInVariant}
 							transition={{
 								duration: 0.3,
 								ease: "easeOut",
-								delay: i <= 3 ? (i + 1) * 0.3 : 0,
+								delay: i <= 3 ? (i + 1) * 0.2 : 0,
 							}}
 							key={Component.key}
 						>

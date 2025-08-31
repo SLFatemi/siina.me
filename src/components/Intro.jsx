@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
 import TypeIt from "typeit-react";
-import profilePicture from "../assets/pfp.png";
+import pfpDark from "../assets/pfpDark.png";
+import pfpLight from "../assets/pfpLight.png";
 
-function Intro({ doneWriting, setDoneWriting }) {
+function Intro({ doneWriting, setDoneWriting, isLight }) {
 	return (
 		<section className="section-img">
 			<motion.div
@@ -11,7 +12,11 @@ function Intro({ doneWriting, setDoneWriting }) {
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.3, ease: "easeIn" }}
 			>
-				<img src={profilePicture} alt={"Sina Fatemi"} className="main-img" />
+				<img
+					src={isLight ? pfpLight : pfpDark}
+					alt={"Sina Fatemi"}
+					className="main-img"
+				/>
 			</motion.div>
 			<div className="name-links">
 				<TypeIt
