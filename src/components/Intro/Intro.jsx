@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
 import TypeIt from "typeit-react";
-import pfpDark from "../assets/pfpDark.png";
-import pfpLight from "../assets/pfpLight.png";
+import pfpDark from "../../assets/pfpDark.png";
+import pfpLight from "../../assets/pfpLight.png";
+import "./_Intro.scss";
 
 function Intro({ doneWriting, setDoneWriting, isLight }) {
 	return (

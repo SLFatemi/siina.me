@@ -1,0 +1,31 @@
+// Global CSS Variables and Theme Settings
+:root {
+  // Light theme colors
+  --primary-color: #f7f4ea;
+  --secondary-color: rgba(198, 150, 112);
+  --main-white: #545e52;
+  --main-gray: #fefefd;
+  --muted-gray: #c6c3bb;
+  --extra-muted-gray: rgba(75, 89, 108, 0.5);
+}
+
+.dark {
+  --primary-color: #232831;
+  --secondary-color: #af83d0;
+  --main-white: #ebe2f4;
+  --main-gray: #191d24;
+  --muted-gray: #4b596c;
+  --extra-muted-gray: rgba(75, 89, 108, 0.5);
+}
+
+// SCSS Variables for consistent values
+$border-radius: 4px;
+$transition-base: all 0.3s;
+$transition-slow: all 1s;
+$container-max-width: 580px;
+$mobile-breakpoint: 768px;
+$spacing-xs: 0.6rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.6rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3.25rem;

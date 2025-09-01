@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import "./App.css";
+import "./styles/main.scss";
 
 import { useEffect, useRef, useState } from "react";
-import DarkModeButton from "./components/DarkModeButton.jsx";
-import Footer from "./components/Footer.jsx";
-import Intro from "./components/Intro.jsx";
+import DarkModeButton from "./components/DarkModeButton/DarkModeButton.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import Intro from "./components/Intro/Intro.jsx";
 import Projects from "./components/Projects/Projects.jsx";
 import Skills from "./components/Skills/Skills.jsx";
-import TextSection from "./components/TextSection.jsx";
+import TextSection from "./components/TextSection/TextSection.jsx";
 
 const glideInVariant = {
 	hidden: { opacity: 0, x: -30 },

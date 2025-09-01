@@ -1,0 +1,60 @@
+@use '../../styles/variables';
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: variables.$spacing-xs;
+  column-gap: variables.$spacing-xs;
+}
+
+.skill {
+  background-color: var(--main-gray);
+  width: 11rem;
+  height: 13rem;
+  border-radius: variables.$border-radius;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1.4rem;
+  transition: variables.$transition-base;
+
+  &:hover {
+    filter: brightness(1.15);
+    transform: translateY(-3px);
+  }
+}
+
+.skill-icon {
+  fill: var(--secondary-color);
+}
+
+.skill-name {
+  font-family: "figtree", sans-serif;
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 1.2;
+  text-wrap: wrap;
+  max-width: 8rem;
+}
+
+// Dark mode adjustments
+@media (prefers-color-scheme: dark) {
+  .skill {
+    &:hover {
+      filter: brightness(0.98);
+    }
+  }
+}
+
+// Mobile responsive
+@media (max-width: variables.$mobile-breakpoint) {
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 0.85rem;
+  }
+}

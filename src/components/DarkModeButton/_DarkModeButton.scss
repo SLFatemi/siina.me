@@ -1,0 +1,22 @@
+@use '../../styles/variables';
+
+.dark-mode-btn {
+  position: absolute;
+  top: 4.25rem;
+  right: 4.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--main-white);
+  transition: variables.$transition-base;
+
+  &:hover {
+    color: var(--secondary-color);
+  }
+
+  // Mobile responsive
+  @media (max-width: variables.$mobile-breakpoint) {
+    top: 2.55rem;
+    right: 2.55rem;
+  }
+}

@@ -1,3 +1,5 @@
+import "./_TextSection.scss";
+
 function TextSection({ children }) {
 	return (
 		<div className={"section-container"}>

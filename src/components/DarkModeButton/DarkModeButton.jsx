@@ -1,4 +1,5 @@
 import { IoMoon, IoSunny } from "react-icons/io5";
+import "./_DarkModeButton.scss";
 
 function DarkModeButton({ onChangeColorScheme, isLight }) {
 	return (

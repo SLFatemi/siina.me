@@ -1,0 +1,30 @@
+@use '../../styles/variables';
+
+footer {
+  grid-column: 1 / -1;
+  margin-top: 8.25rem;
+  padding: 6.25rem 0;
+  border-top: solid 1px var(--extra-muted-gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100%;
+
+  p {
+    font-family: Figtree, "sans-serif";
+    font-size: 1.4rem;
+    color: var(--muted-gray);
+    letter-spacing: 1px;
+
+    span {
+      color: var(--secondary-color);
+    }
+  }
+
+  // Mobile responsive
+  @media (max-width: variables.$mobile-breakpoint) {
+    display: flex;
+    flex-direction: column;
+    row-gap: variables.$spacing-sm;
+  }
+}

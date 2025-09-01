@@ -1,3 +1,5 @@
+import "./_Footer.scss";
+
 function Footer() {
 	const curYear = new Date().getFullYear();
 	return (

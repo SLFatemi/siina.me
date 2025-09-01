@@ -1,0 +1,65 @@
+@use 'variables';
+
+.container {
+  width: 100%;
+  max-width: variables.$container-max-width;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: variables.$spacing-xl;
+  align-items: start;
+}
+
+.section-container {
+  display: grid;
+  grid-template-columns: 0 1fr;
+  column-gap: 2.2rem;
+}
+
+.section-name {
+  color: var(--muted-gray);
+  font-size: 1.5rem;
+  font-weight: 600;
+  justify-self: end;
+  margin-top: 0.3rem;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.section-description {
+  color: var(--main-white);
+  font-size: 1.8rem;
+  letter-spacing: 1.4px;
+  line-height: 1.4;
+  font-weight: 400;
+  white-space: pre-line;
+}
+
+// Mobile responsive
+@media (max-width: variables.$mobile-breakpoint) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 348px;
+    margin: 1rem auto;
+    row-gap: 0;
+  }
+
+  .section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-name {
+    display: flex;
+    align-items: center;
+    margin: 0 auto 1rem;
+  }
+
+  .section-description {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+}

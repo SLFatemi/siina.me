@@ -2,6 +2,7 @@ import { FaCss3Alt, FaHtml5, FaReact } from "react-icons/fa";
 import { IoIosBrush } from "react-icons/io";
 import { IoLogoJavascript, IoLogoPython } from "react-icons/io5";
 import Skill from "./Skill.jsx";
+import "./_Skills.scss";
 
 const skillsList = [
 	{ name: "HTML5", svg: FaHtml5 },

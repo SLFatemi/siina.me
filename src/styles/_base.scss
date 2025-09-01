@@ -1,0 +1,38 @@
+// Base styles and resets
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  padding-bottom: 2px;
+  border-bottom: 3px solid var(--secondary-color);
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: "Georama", sans-serif;
+  transition: background-color 0.3s;
+}
+
+// Common animations
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+// Utility classes
+.--hidden {
+  opacity: 0;
+}
