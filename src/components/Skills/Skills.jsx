@@ -9,7 +9,7 @@ const skillsList = [
 	{ name: "CSS3", svg: FaCss3Alt },
 	{ name: "Javascript", svg: IoLogoJavascript },
 	{ name: "React.js", svg: FaReact },
-	{ name: "Pyhton", svg: IoLogoPython },
+	{ name: "Python", svg: IoLogoPython },
 	{ name: "Graphic Design", svg: IoIosBrush },
 ];
 
