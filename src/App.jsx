@@ -45,8 +45,8 @@ function App() {
 					"I’m currently majoring in Computer Science at Iran University of Science and Technology (IUST)",
 			}}
 		</TextSection>,
-		<Skills key={"Skills"} />,
-		<Projects key={"Projects"} />,
+		<Skills key={"Skills"} isLight={isLight} />,
+		<Projects key={"Projects"} isLight={isLight} />,
 	];
 
 	return (

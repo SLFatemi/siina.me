@@ -19,9 +19,17 @@
   row-gap: 1.4rem;
   transition: variables.$transition-base;
 
+
   &:hover {
-    filter: brightness(1.15);
     transform: translateY(-3px);
+  }
+
+  &.light:hover {
+    filter: brightness(variables.$brightness-light);
+  }
+
+  &.dark:hover {
+    filter: brightness(variables.$brightness-dark);
   }
 }
 
@@ -41,14 +49,6 @@
   max-width: 8rem;
 }
 
-// Dark mode adjustments
-@media (prefers-color-scheme: dark) {
-  .skill {
-    &:hover {
-      filter: brightness(0.98);
-    }
-  }
-}
 
 // Mobile responsive
 @media (max-width: variables.$mobile-breakpoint) {

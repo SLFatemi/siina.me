@@ -18,8 +18,15 @@
   transition: variables.$transition-base;
 
   &:hover {
-    filter: brightness(1.15);
     transform: translateY(-3px);
+  }
+
+  &.light:hover {
+    filter: brightness(variables.$brightness-light);
+  }
+
+  &.dark:hover {
+    filter: brightness(variables.$brightness-dark);
   }
 
   h2 {
@@ -93,8 +100,12 @@
   padding: 1.8rem 1.4rem;
   transition: variables.$transition-base;
 
-  &:hover {
-    filter: brightness(1.15);
+  &.light:hover {
+    filter: brightness(variables.$brightness-light);
+  }
+
+  &.dark:hover {
+    filter: brightness(variables.$brightness-dark);
   }
 
   span {

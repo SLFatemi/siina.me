@@ -1,19 +1,20 @@
-import { FaCss3Alt, FaHtml5, FaReact } from "react-icons/fa";
+import { FaCss3Alt, FaReact } from "react-icons/fa";
 import { IoIosBrush } from "react-icons/io";
 import { IoLogoJavascript, IoLogoPython } from "react-icons/io5";
+import { SiSass } from "react-icons/si";
 import Skill from "./Skill.jsx";
 import "./_Skills.scss";
 
 const skillsList = [
-	{ name: "HTML5", svg: FaHtml5 },
-	{ name: "CSS3", svg: FaCss3Alt },
-	{ name: "Javascript", svg: IoLogoJavascript },
 	{ name: "React.js", svg: FaReact },
+	{ name: "Javascript", svg: IoLogoJavascript },
+	{ name: "Sass/SCSS", svg: SiSass },
+	{ name: "CSS3", svg: FaCss3Alt },
 	{ name: "Python", svg: IoLogoPython },
 	{ name: "Graphic Design", svg: IoIosBrush },
 ];
 
-function Skills() {
+function Skills({ isLight }) {
 	return (
 		<div className={"section-container"}>
 			<div className="section-name --skills">Skills</div>
@@ -22,7 +23,12 @@ function Skills() {
 					<div className="skills">
 						{skillsList.map((skill) => {
 							return (
-								<Skill name={skill.name} svg={skill.svg} key={skill.name} />
+								<Skill
+									isLight={isLight}
+									name={skill.name}
+									svg={skill.svg}
+									key={skill.name}
+								/>
 							);
 						})}
 					</div>

@@ -9,7 +9,7 @@
   --extra-muted-gray: rgba(75, 89, 108, 0.5);
 }
 
-.dark {
+body.dark {
   --primary-color: #232831;
   --secondary-color: #af83d0;
   --main-white: #ebe2f4;
@@ -29,3 +29,5 @@ $spacing-sm: 1rem;
 $spacing-md: 1.6rem;
 $spacing-lg: 2rem;
 $spacing-xl: 3.25rem;
+$brightness-light: 0.98;
+$brightness-dark: 1.1;

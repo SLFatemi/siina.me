@@ -1,9 +1,12 @@
 import GithubButton from "./GithubButton.jsx";
 import UrlButton from "./UrlButton.jsx";
 
-function Project({ project }) {
+function Project({ project, isLight }) {
 	return (
-		<div key={project.title} className="project-card">
+		<div
+			key={project.title}
+			className={`project-card ${isLight ? "light" : "dark"}`}
+		>
 			<h2>{project.title}</h2>
 			<p>{project.description}</p>
 			<div className="tags">

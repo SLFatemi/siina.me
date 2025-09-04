@@ -19,7 +19,7 @@ const projects = [
 	{
 		title: "Siina.me",
 		description: "This particular Website",
-		tags: ["React.js", "Figma"],
+		tags: ["React.js", "Figma", "SCSS"],
 		link: "https://github.com/SLFatemi/siina.me",
 	},
 	{
@@ -52,7 +52,7 @@ const projects = [
 	},
 ];
 
-function Projects() {
+function Projects({ isLight }) {
 	return (
 		<div className={"section-container"}>
 			<div className="section-name --projects">Projects</div>
@@ -64,10 +64,13 @@ function Projects() {
 					columnClassName="masonry-column"
 				>
 					{projects.map((p) => (
-						<Project key={p.title} project={p} />
+						<Project isLight={isLight} key={p.title} project={p} />
 					))}
 				</Masonry>
-				<SeeMoreButton link={"https://github.com/SLFatemi/"} />
+				<SeeMoreButton
+					isLight={isLight}
+					link={"https://github.com/SLFatemi/"}
+				/>
 			</section>
 		</div>
 	);
