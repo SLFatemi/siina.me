@@ -10,11 +10,12 @@ const breakpointColumnsObj = {
 
 const projects = [
 	{
-		title: "Code Scrapper",
+		title: "FitBit",
 		description:
-			"A modular platform for real estate data collection, processing, and analysis",
-		tags: ["Python", "FastAPI", "Javascript", "RabbitMQ"],
-		link: "https://github.com/SLFatemi/CodeScraper",
+			"A lightweight web app to search for exercises, view details, and bookmark your favorites for exercises via the ExerciseDB API",
+		tags: ["React.js", "Figma", "SCSS"],
+		link: "https://github.com/SLFatemi/fitbit",
+		url: "https://fit-bit.pages.dev",
 	},
 	{
 		title: "Siina.me",
@@ -29,6 +30,13 @@ const projects = [
 		tags: ["Javascript", "Course-Project"],
 		link: "https://github.com/SLFatemi/Forkify",
 		url: "https://forkiify.pages.dev/",
+	},
+	{
+		title: "Code Scrapper",
+		description:
+			"A modular platform for real estate data collection, processing, and analysis",
+		tags: ["Python", "FastAPI", "Javascript", "RabbitMQ"],
+		link: "https://github.com/SLFatemi/CodeScraper",
 	},
 	{
 		title: "usePopcorn",
