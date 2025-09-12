@@ -4,8 +4,27 @@ import TypeIt from "typeit-react";
 import pfpDark from "../../assets/pfpDark.png";
 import pfpLight from "../../assets/pfpLight.png";
 import "./_Intro.scss";
+import { useEffect, useState } from "react";
+import { useTranslation } from "../../i18n/i18nProvider.js";
 
 function Intro({ doneWriting, setDoneWriting, isLight }) {
+	const { t, language } = useTranslation();
+	const [hasTyped, setHasTyped] = useState(false);
+
+	// Set doneWriting to true immediately if we've already typed once
+	useEffect(() => {
+		if (hasTyped) {
+			setDoneWriting(true);
+		}
+	}, [hasTyped, setDoneWriting]);
+
+	const handleTypingComplete = () => {
+		setHasTyped(true);
+		setTimeout(() => {
+			setDoneWriting(true);
+		}, 200);
+	};
+
 	return (
 		<section className="section-img">
 			<motion.div
@@ -20,19 +39,24 @@ function Intro({ doneWriting, setDoneWriting, isLight }) {
 				/>
 			</motion.div>
 			<div className="name-links">
-				<TypeIt
-					options={{
-						afterComplete: (instance) => {
-							instance.destroy();
-							setTimeout(() => {
-								setDoneWriting(true);
-							}, 200);
-						},
-					}}
-					className="name"
-				>
-					Sina<span className="sm-space"> </span>Fatemi
-				</TypeIt>
+				{!hasTyped ? (
+					<TypeIt
+						options={{
+							afterComplete: handleTypingComplete,
+						}}
+						className={`name ${language}`}
+					>
+						{t("intro.firstName")}
+						<span className="sm-space"> </span>
+						{t("intro.lastName")}
+					</TypeIt>
+				) : (
+					<div className={`name ${language}`}>
+						{t("intro.firstName")}
+						<span className="sm-space"> </span>
+						{t("intro.lastName")}
+					</div>
+				)}
 				{doneWriting && (
 					<ul className="social-links">
 						<li>
@@ -54,7 +78,7 @@ function Intro({ doneWriting, setDoneWriting, isLight }) {
 				)}
 			</div>
 			<div className={`description ${!doneWriting && "--hidden"}`}>
-				Front-End Developer
+				{t("intro.description")}
 			</div>
 		</section>
 	);

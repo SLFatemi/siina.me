@@ -1,12 +1,16 @@
 import "./_Footer.scss";
+import { useTranslation } from "../../i18n/i18nProvider.js";
 
 function Footer() {
+	const { t } = useTranslation();
 	const curYear = new Date().getFullYear();
 	return (
-		<footer className={"section --footer"}>
-			<p>© {curYear} Sina Fatemi</p>
+		<footer className={"section --footer secondary-font"}>
 			<p>
-				Built with <span>React.js</span>
+				{"©"} {curYear} {t("footer.copyright")}
+			</p>
+			<p>
+				{t("footer.builtWith")} <span>{t("footer.framework")}</span>
 			</p>
 		</footer>
 	);

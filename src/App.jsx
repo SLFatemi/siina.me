@@ -2,12 +2,15 @@ import { motion } from "framer-motion";
 import "./styles/main.scss";
 
 import { useEffect, useRef, useState } from "react";
+import ChangeLangButton from "./components/ChangeLangButton/ChangeLangButton.jsx";
 import DarkModeButton from "./components/DarkModeButton/DarkModeButton.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Intro from "./components/Intro/Intro.jsx";
+import NavBtns from "./components/NavBtns/NavBtns.jsx";
 import Projects from "./components/Projects/Projects.jsx";
 import Skills from "./components/Skills/Skills.jsx";
 import TextSection from "./components/TextSection/TextSection.jsx";
+import { useTranslation } from "./i18n/i18nProvider.js";
 
 const glideInVariant = {
 	hidden: { opacity: 0, x: -30 },
@@ -17,6 +20,7 @@ const glideInVariant = {
 function App() {
 	const [doneWriting, setDoneWriting] = useState(false);
 	const [isLight, setIsLight] = useState(false);
+	const { t } = useTranslation();
 
 	const bodyEl = useRef(document.querySelector("body"));
 
@@ -33,16 +37,14 @@ function App() {
 	const componentsArray = [
 		<TextSection key={"About"}>
 			{{
-				name: "About",
-				description: `Hey 👋, I’m Sina a 19 y/o Software Engineer eager to learn more about Front-End technologies.
-                       I try to build interfaces that feel as good as they look, from pixel-perfect designs in Figma to live, responsive apps in the browser`,
+				name: t("sections.about.name"),
+				description: t("sections.about.description"),
 			}}
 		</TextSection>,
 		<TextSection key={"Edu"}>
 			{{
-				name: "Education",
-				description:
-					"I’m currently majoring in Computer Science at Iran University of Science and Technology (IUST)",
+				name: t("sections.education.name"),
+				description: t("sections.education.description"),
 			}}
 		</TextSection>,
 		<Skills key={"Skills"} isLight={isLight} />,
@@ -51,10 +53,13 @@ function App() {
 
 	return (
 		<div className="container">
-			<DarkModeButton
-				onChangeColorScheme={handleChangeColorScheme}
-				isLight={isLight}
-			/>
+			<NavBtns>
+				<ChangeLangButton />
+				<DarkModeButton
+					onChangeColorScheme={handleChangeColorScheme}
+					isLight={isLight}
+				/>
+			</NavBtns>
 			<Intro
 				doneWriting={doneWriting}
 				setDoneWriting={setDoneWriting}

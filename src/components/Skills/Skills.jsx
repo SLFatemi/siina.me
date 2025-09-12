@@ -4,6 +4,7 @@ import { IoLogoJavascript, IoLogoPython } from "react-icons/io5";
 import { SiSass } from "react-icons/si";
 import Skill from "./Skill.jsx";
 import "./_Skills.scss";
+import { useTranslation } from "../../i18n/i18nProvider.js";
 
 const skillsList = [
 	{ name: "React.js", svg: FaReact },
@@ -15,9 +16,11 @@ const skillsList = [
 ];
 
 function Skills({ isLight }) {
+	const { t } = useTranslation();
+
 	return (
 		<div className={"section-container"}>
-			<div className="section-name --skills">Skills</div>
+			<div className="section-name --skills">{t("sections.skills.name")}</div>
 			<section className="section --skills">
 				<div className="section-description">
 					<div className="skills">

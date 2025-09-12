@@ -38,7 +38,6 @@
   }
 
   p {
-    font-family: 'Georama', sans-serif;
     font-size: variables.$spacing-md;
     font-weight: 300;
     color: var(--main-white);
@@ -63,7 +62,6 @@
 
   button {
     cursor: pointer;
-    font-family: 'Figtree', sans-serif;
     background: none;
     border: none;
     color: var(--muted-gray);

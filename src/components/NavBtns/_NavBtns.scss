@@ -1,0 +1,15 @@
+@use '../../styles/variables' as *;
+
+.nav-btns {
+  position: absolute;
+  top: 4.25rem;
+  inset-inline-end: 4.25rem;
+  display: flex;
+  align-items: center;
+  gap:calc($spacing-lg * 1.6);
+  @media (max-width: $mobile-breakpoint) {
+    top: 2.55rem;
+    inset-inline-end: 2.55rem;
+    gap:$spacing-lg
+  }
+}

@@ -1,0 +1,15 @@
+@use '../../styles/variables' as *;
+
+.change-lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--main-white);
+  transition: $transition-base;
+  font-weight:800;
+  font-size: 1.4rem;
+  letter-spacing: 1.4px;
+  &:hover {
+    color: var(--secondary-color);
+  }
+}

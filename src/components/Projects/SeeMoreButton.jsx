@@ -1,6 +1,8 @@
 import { FaGithub } from "react-icons/fa";
+import { useTranslation } from "../../i18n/i18nProvider.js";
 
 function SeeMoreButton({ link, isLight }) {
+	const { t } = useTranslation();
 	const openInNewTab = () => {
 		window.open(link, "_blank", "noopener,noreferrer");
 	};
@@ -10,7 +12,7 @@ function SeeMoreButton({ link, isLight }) {
 			type={"button"}
 			className={`see-more ${isLight ? "light" : "dark"}`}
 		>
-			<span>See more on</span>
+			<span className={"secondary-font"}>{t("projects.seeMoreOn")}</span>
 			<FaGithub size={28} />
 		</button>
 	);
