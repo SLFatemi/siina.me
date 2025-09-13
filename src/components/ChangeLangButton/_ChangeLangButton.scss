@@ -1,15 +1,23 @@
 @use '../../styles/variables' as *;
 
 .change-lang-btn {
-  background: none;
   border: none;
   cursor: pointer;
-  color: var(--main-white);
+  color: var(--primary-color);
   transition: $transition-base;
   font-weight:800;
-  font-size: 1.4rem;
-  letter-spacing: 1.4px;
+  font-size: 1.2rem;
+
+  padding: 0.3rem;
+  background-color: var(--main-white);
+  border-radius: $border-radius;
+
   &:hover {
-    color: var(--secondary-color);
+    background-color: var(--secondary-color);
   }
+}
+
+.change-lang-btn.fa{
+  font-size: 1.3rem;
+  padding: 0.2rem 0.45rem 0 0.45rem ;
 }

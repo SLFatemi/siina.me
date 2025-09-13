@@ -27,7 +27,7 @@ const translation = {
 			name: "پروژه‌ها",
 		},
 		skills: {
-			name: "مهارتها",
+			name: "مهارت‌ها",
 		},
 	},
 	footer: {

@@ -9,9 +9,9 @@ function ChangeLangButton() {
 				setLanguage(language === "en" ? "fa" : "en");
 			}}
 			type={"button"}
-			className={"change-lang-btn secondary-font"}
+			className={`change-lang-btn secondary-font ${language}`}
 		>
-			{t("buttons.changeLang")}
+			<p>{t("buttons.changeLang")}</p>
 		</button>
 	);
 }
