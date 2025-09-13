@@ -49,7 +49,11 @@ export type Lang = keyof typeof allTranslations;
 const I18nContext = createContext<I18nContextProps | undefined>(undefined);
 
 export const I18nProvider = ({ children }: { children: ReactNode }) => {
-	const [language, setLanguage] = useState<Lang>("en");
+	const [language, setLanguage] = useState<Lang>(() => {
+		return localStorage.getItem("lang")
+			? JSON.parse(localStorage.getItem("lang"))
+			: "en";
+	});
 
 	const t = (path: string, vars?: Record<string, string | number>): string => {
 		const langPack = allTranslations[language];

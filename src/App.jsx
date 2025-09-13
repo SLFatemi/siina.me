@@ -19,8 +19,21 @@ const glideInVariant = {
 
 function App() {
 	const [doneWriting, setDoneWriting] = useState(false);
-	const [isLight, setIsLight] = useState(false);
-	const { t } = useTranslation();
+	const [isLight, setIsLight] = useState(() => {
+		return localStorage.getItem("darkMode")
+			? JSON.parse(localStorage.getItem("darkMode"))
+			: false;
+	});
+
+	const { t, language } = useTranslation();
+
+	useEffect(() => {
+		localStorage.setItem("lang", JSON.stringify(language));
+	}, [language]);
+
+	useEffect(() => {
+		localStorage.setItem("darkMode", JSON.stringify(isLight));
+	}, [isLight]);
 
 	const bodyEl = useRef(document.querySelector("body"));
 
