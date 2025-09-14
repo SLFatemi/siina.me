@@ -19,7 +19,6 @@
   row-gap: 1.4rem;
   transition: variables.$transition-base;
 
-
   &:hover {
     transform: translateY(-3px);
   }
@@ -33,11 +32,11 @@
   }
 }
 
-.skill-icon {
+.skillIcon {
   fill: var(--secondary-color);
 }
 
-.skill-name {
+.skillName {
   font-family: "figtree", sans-serif;
   font-size: 1.4rem;
   color: var(--secondary-color);
@@ -48,7 +47,6 @@
   text-wrap: wrap;
   max-width: 8rem;
 }
-
 
 // Mobile responsive
 @media (max-width: variables.$mobile-breakpoint) {

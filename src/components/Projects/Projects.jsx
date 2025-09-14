@@ -1,7 +1,7 @@
 import Masonry from "react-masonry-css";
-import Project from "./Project.jsx";
-import "./_Projects.scss";
 import { useTranslation } from "../../i18n/i18nProvider.js";
+import Project from "./Project.jsx";
+import styles from "./Projects.module.scss";
 import SeeMoreButton from "./SeeMoreButton.jsx";
 
 const breakpointColumnsObj = {
@@ -69,7 +69,7 @@ function Projects({ isLight }) {
 			<section className={"section --projects"}>
 				<Masonry
 					breakpointCols={breakpointColumnsObj}
-					className="masonry-grid"
+					className={styles.masonryGrid}
 					columnClassName="masonry-column"
 				>
 					{projects.map((p) => (

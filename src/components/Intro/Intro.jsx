@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
 import TypeIt from "typeit-react";
 import pfpDark from "../../assets/pfpDark.png";
 import pfpLight from "../../assets/pfpLight.png";
-import "./_Intro.scss";
-import { useEffect, useState } from "react";
 import { useTranslation } from "../../i18n/i18nProvider.js";
+import styles from "./Intro.module.scss";
 
 function Intro({ doneWriting, setDoneWriting, isLight }) {
 	const { t, language } = useTranslation();
@@ -26,7 +26,7 @@ function Intro({ doneWriting, setDoneWriting, isLight }) {
 	};
 
 	return (
-		<section className="section-img">
+		<section className={styles.sectionImg}>
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
@@ -35,49 +35,53 @@ function Intro({ doneWriting, setDoneWriting, isLight }) {
 				<img
 					src={isLight ? pfpLight : pfpDark}
 					alt={"Sina Fatemi"}
-					className="main-img"
+					className={styles.mainImg}
 				/>
 			</motion.div>
-			<div className="name-links">
+			<div className={styles.nameLinks}>
 				{!hasTyped ? (
 					<TypeIt
 						options={{
 							afterComplete: handleTypingComplete,
 						}}
-						className={`name ${language}`}
+						className={`${styles.name} ${language === "fa" ? styles.fa : ""}`}
 					>
 						{t("intro.firstName")}
-						<span className="sm-space"> </span>
+						<span className={styles.smSpace}> </span>
 						{t("intro.lastName")}
 					</TypeIt>
 				) : (
-					<div className={`name ${language}`}>
+					<div
+						className={`${styles.name} ${language === "fa" ? styles.fa : ""}`}
+					>
 						{t("intro.firstName")}
-						<span className="sm-space"> </span>
+						<span className={styles.smSpace}> </span>
 						{t("intro.lastName")}
 					</div>
 				)}
 				{doneWriting && (
-					<ul className="social-links">
+					<ul className={styles.socialLinks}>
 						<li>
 							<a className="link" href="https://www.linkedin.com/in/sinafatemi">
-								<FaLinkedin className={"link-icon"} size={20} />
+								<FaLinkedin className={styles.linkIcon} size={20} />
 							</a>
 						</li>
 						<li>
 							<a className="link" href="https://github.com/SLFatemi">
-								<FaGithub className={"link-icon"} size={20} />
+								<FaGithub className={styles.linkIcon} size={20} />
 							</a>
 						</li>
 						<li>
 							<a className="link" href="https://t.me//SLfatemi">
-								<FaTelegram className={"link-icon"} size={20} />
+								<FaTelegram className={styles.linkIcon} size={20} />
 							</a>
 						</li>
 					</ul>
 				)}
 			</div>
-			<div className={`description ${!doneWriting && "--hidden"}`}>
+			<div
+				className={`${styles.description} ${!doneWriting ? styles.hidden : ""}`}
+			>
 				{t("intro.description")}
 			</div>
 		</section>

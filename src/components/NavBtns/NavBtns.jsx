@@ -1,7 +1,7 @@
-import "./_NavBtns.scss";
+import styles from "./NavBtns.module.scss";
 
 function NavBtns({ children }) {
-	return <div className={"nav-btns"}>{children}</div>;
+	return <div className={styles.navBtns}>{children}</div>;
 }
 
 export default NavBtns;

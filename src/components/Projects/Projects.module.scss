@@ -4,12 +4,12 @@
   transition: variables.$transition-base;
 }
 
-.masonry-grid {
+.masonryGrid {
   display: flex;
   gap: variables.$spacing-xs;
 }
 
-.project-card {
+.projectCard {
   background: var(--main-gray);
   border-radius: variables.$border-radius;
   padding: 2.75rem 3.25rem;
@@ -69,7 +69,6 @@
     align-items: center;
     gap: 0.5rem;
     flex-direction: row-reverse;
-    padding: 0.5rem 0.6rem;
     font-size: 1.3rem;
     font-weight: 700;
     transition: variables.$transition-base;
@@ -81,11 +80,12 @@
 
   .buttons {
     display: flex;
-    gap: 0.5rem;
+    padding-top: 0.5rem;
+    gap: 1.6rem;
   }
 }
 
-.see-more {
+.seeMore {
   display: flex;
   align-items: center;
   gap: 1.25rem;
@@ -116,22 +116,21 @@
   }
 }
 
-.github-icon {
+.githubIcon {
   color: var(--muted-gray);
 }
 
 // Dark mode adjustments
 @media (prefers-color-scheme: dark) {
-  .project-card {
+  .projectCard {
     &:hover {
       filter: brightness(0.98);
     }
   }
 
-  .see-more {
+  .seeMore {
     &:hover {
       filter: brightness(0.98);
     }
   }
-
 }

@@ -1,6 +1,6 @@
 @use '../../styles/variables' as *;
 
-.change-lang-btn {
+.changeLangBtn {
   border: none;
   cursor: pointer;
   color: var(--primary-color);
@@ -17,7 +17,7 @@
   }
 }
 
-.change-lang-btn.fa{
+.fa {
   font-size: 1.3rem;
   padding: 0.2rem 0.45rem 0 0.45rem ;
 }

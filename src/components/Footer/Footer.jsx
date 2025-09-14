@@ -1,11 +1,11 @@
-import "./_Footer.scss";
 import { useTranslation } from "../../i18n/i18nProvider.js";
+import styles from "./Footer.module.scss";
 
 function Footer() {
 	const { t } = useTranslation();
 	const curYear = new Date().getFullYear();
 	return (
-		<footer className={"section --footer secondary-font"}>
+		<footer className={`${styles.footer} section --footer secondary-font`}>
 			<p>
 				{"©"} {curYear} {t("footer.copyright")}
 			</p>

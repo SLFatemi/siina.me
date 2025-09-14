@@ -1,8 +1,10 @@
+import styles from "./Skills.module.scss";
+
 function Skill({ name, svg: Icon, isLight }) {
 	return (
-		<div className={`skill ${isLight ? "light" : "dark"}`}>
-			<Icon size={64} className={"skill-icon"} />
-			<div className="skill-name">{name}</div>
+		<div className={`${styles.skill} ${isLight ? "light" : "dark"}`}>
+			<Icon size={64} className={styles.skillIcon} />
+			<div className={styles.skillName}>{name}</div>
 		</div>
 	);
 }

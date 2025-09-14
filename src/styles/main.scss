@@ -3,11 +3,3 @@
 @use 'variables';
 @use 'base';
 @use 'layout';
-
-// Component styles
-@use '../components/Intro/Intro';
-@use '../components/Skills/Skills';
-@use '../components/Projects/Projects';
-@use '../components/DarkModeButton/DarkModeButton';
-@use '../components/Footer/Footer';
-@use '../components/TextSection/TextSection';

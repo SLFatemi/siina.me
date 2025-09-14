@@ -1,6 +1,6 @@
 @use '../../styles/variables';
 
-.section-img {
+.sectionImg {
   grid-column: 2;
   margin-bottom: 2.25rem;
   margin-inline-start: 2.2rem;
@@ -9,7 +9,7 @@
   align-items: start;
 }
 
-.main-img {
+.mainImg {
   height: 14rem;
   border-radius: 100%;
   border: 6px solid var(--main-gray);
@@ -17,7 +17,7 @@
   transition: variables.$transition-slow;
 }
 
-.name-links {
+.nameLinks {
   display: flex;
   align-items: end;
   gap: variables.$spacing-sm;
@@ -29,12 +29,12 @@
   color: var(--main-white);
 }
 
-.name.fa{
+.fa {
   line-height: 1.4;
   font-weight: 900;
 }
 
-.sm-space {
+.smSpace {
   font-size: 3.2rem;
 }
 
@@ -46,7 +46,7 @@
   transition: variables.$transition-base;
 }
 
-.social-links {
+.socialLinks {
   list-style: none;
   margin-bottom: 0.75rem;
   animation: appear 0.5s ease-out forwards;
@@ -54,7 +54,7 @@
   gap: variables.$spacing-sm;
 }
 
-.link-icon {
+.linkIcon {
   height: 2.2rem;
   fill: var(--muted-gray);
   transition: all 0.3s ease-in-out;
@@ -64,16 +64,20 @@
   }
 }
 
+.hidden {
+  opacity: 0;
+}
+
 // Mobile responsive
 @media (max-width: variables.$mobile-breakpoint) {
-  .section-img {
+  .sectionImg {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 0 3rem;
   }
 
-  .name-links {
+  .nameLinks {
     flex-direction: column;
     align-items: center;
   }

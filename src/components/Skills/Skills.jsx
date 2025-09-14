@@ -2,9 +2,9 @@ import { FaCss3Alt, FaReact } from "react-icons/fa";
 import { IoIosBrush } from "react-icons/io";
 import { IoLogoJavascript, IoLogoPython } from "react-icons/io5";
 import { SiSass } from "react-icons/si";
-import Skill from "./Skill.jsx";
-import "./_Skills.scss";
 import { useTranslation } from "../../i18n/i18nProvider.js";
+import Skill from "./Skill.jsx";
+import styles from "./Skills.module.scss";
 
 const skillsList = [
 	{ name: "React.js", svg: FaReact },
@@ -23,7 +23,7 @@ function Skills({ isLight }) {
 			<div className="section-name --skills">{t("sections.skills.name")}</div>
 			<section className="section --skills">
 				<div className="section-description">
-					<div className="skills">
+					<div className={styles.skills}>
 						{skillsList.map((skill) => {
 							return (
 								<Skill
