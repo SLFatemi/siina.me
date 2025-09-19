@@ -6,6 +6,9 @@ const translation = {
 	nav: {
 		name: "Sina Fatemi",
 		altText: "Sina Lotfi Fatemi's Typography",
+		listAbout: "About",
+		listSkills: "Skills",
+		listProjects: "Projects",
 	},
 	intro: {
 		firstName: "Sina",

@@ -7,7 +7,8 @@ import DarkModeButton from "./components/DarkModeButton/DarkModeButton.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Header from "./components/Header/Header.jsx";
 import Intro from "./components/Intro/Intro.jsx";
-import NavBtns from "./components/NavBtns/NavBtns.jsx";
+import NavList from "./components/NavBtns/NavList.jsx";
+import NavBtns from "./components/NavList/NavBtns.jsx";
 import NavName from "./components/NavName/NavName.jsx";
 import Projects from "./components/Projects/Projects.jsx";
 import Skills from "./components/Skills/Skills.jsx";
@@ -50,13 +51,13 @@ function App() {
 	}, [isLight]);
 
 	const componentsArray = [
-		<TextSection key={"About"}>
+		<TextSection id={"About"} key={"About"}>
 			{{
 				name: t("sections.about.name"),
 				description: t("sections.about.description"),
 			}}
 		</TextSection>,
-		<TextSection key={"Edu"}>
+		<TextSection id={"Education"} key={"Edu"}>
 			{{
 				name: t("sections.education.name"),
 				description: t("sections.education.description"),
@@ -71,6 +72,7 @@ function App() {
 			<Header>
 				<nav>
 					<NavName isLight={isLight} />
+					<NavList />
 					<NavBtns>
 						<ChangeLangButton />
 						<DarkModeButton

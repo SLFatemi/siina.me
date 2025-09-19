@@ -5,16 +5,11 @@
   box-sizing: border-box;
 }
 
-*:focus {
-  outline: none;
-  padding-bottom: 2px;
-  border-bottom: 3px solid var(--secondary-color);
-}
-
 html {
   font-size: 10px;
   overflow-x: hidden;
   font-family: 'Georama', 'YekanBakh', sans-serif;
+  scroll-behavior: smooth;
 
   .secondary-font {
     font-family: 'Figtree', sans-serif;

@@ -24,6 +24,7 @@
     justify-content: space-between;
     width: 100%;
     padding: 0 2rem;
+    gap: $spacing-lg;
   }
 
   @media (min-width: $mobile-breakpoint) {

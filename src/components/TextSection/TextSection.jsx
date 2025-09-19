@@ -1,6 +1,6 @@
-function TextSection({ children }) {
+function TextSection({ children, id }) {
 	return (
-		<div className={"section-container"}>
+		<div className={"section-container"} id={id}>
 			<div className="section-name">{children.name}</div>
 			<section>
 				<p className="section-description">{children.description}</p>

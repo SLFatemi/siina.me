@@ -6,6 +6,9 @@ const translation = {
 	nav: {
 		name: "سینا فاطمی",
 		altText: "تایپوگرافی سینا لطفی فاطمی",
+		listAbout: "درباره‌من",
+		listSkills: "مهارت‌ها",
+		listProjects: "پروژه‌ها",
 	},
 	intro: {
 		firstName: "سینـــا",
