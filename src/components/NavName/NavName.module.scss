@@ -1,0 +1,20 @@
+@use '../../styles/variables' as *;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+  cursor: pointer;
+}
+
+.name {
+  color: var(--main-white)
+}
+
+.image {
+  width: 24px;
+}
+
+.dark {
+  filter: invert(1) brightness(100) contrast(100);
+}

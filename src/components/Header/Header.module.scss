@@ -1,0 +1,51 @@
+@use '../../styles/variables' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 5.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  transform: translateX(-50%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: width 0.2s ease, background-color 0.3s;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+@media (min-width: $mobile-breakpoint) {
+  .header {
+    top: 2rem;
+    width: calc($mobile-breakpoint + 2rem);
+    transform: translateX(calc(-50% + 1rem));
+    box-shadow: none;
+  }
+
+  // DESKTOP!
+  html[dir=rtl] {
+    // Not recommended !
+    .header {
+      transform: translateX(calc(-50% - 1rem));
+    }
+  }
+  .headerScrolled {
+    width: calc($container-max-width);
+    border-radius: calc($border-radius * 2);
+    border: solid 2px var(--extra-muted-gray);
+    background-color: var(--primary-color-tp);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+}

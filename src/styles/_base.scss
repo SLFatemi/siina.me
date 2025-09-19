@@ -14,15 +14,15 @@
 html {
   font-size: 10px;
   overflow-x: hidden;
-  font-family: 'Georama','YekanBakh', sans-serif;
+  font-family: 'Georama', 'YekanBakh', sans-serif;
 
-  .secondary-font{
+  .secondary-font {
     font-family: 'Figtree', sans-serif;
   }
 }
 
-html[dir=rtl]{
-  .secondary-font{
+html[dir=rtl] {
+  .secondary-font {
     font-family: 'IRANYekanX', sans-serif;
   }
 }
