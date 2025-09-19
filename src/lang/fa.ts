@@ -3,6 +3,10 @@ const translation = {
 		en: "English",
 		fa: "فارسی",
 	},
+	nav: {
+		name: "سینا فاطمی",
+		altText: "تایپوگرافی سینا لطفی فاطمی",
+	},
 	intro: {
 		firstName: "سینـــا",
 		lastName: "فاطمــی",

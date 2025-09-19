@@ -12,40 +12,41 @@
   background-color: var(--primary-color);
   transform: translateX(-50%);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: width 0.2s ease, background-color 0.3s;
-  z-index: 1;
-}
+  transition: width 0.2s ease,
+  background-color 0.3s ease,
+  border-radius 0.2s ease,
+  box-shadow 0.2s ease;
+  z-index: 1000;
 
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 2rem;
-}
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+  }
 
-@media (min-width: $mobile-breakpoint) {
-  .header {
+  @media (min-width: $mobile-breakpoint) {
     top: 2rem;
-    width: calc($mobile-breakpoint + 2rem);
+    width: calc(#{$mobile-breakpoint} + 2rem);
     transform: translateX(calc(-50% + 1rem));
     box-shadow: none;
-  }
 
-  // DESKTOP!
-  html[dir=rtl] {
-    // Not recommended !
-    .header {
-      transform: translateX(calc(-50% - 1rem));
+    &.headerScrolled {
+      width: $container-max-width;
+      border-radius: calc(#{$border-radius} * 2);
+      border: 2px solid var(--extra-muted-gray);
+      background-color: var(--primary-color-tp);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
   }
-  .headerScrolled {
-    width: calc($container-max-width);
-    border-radius: calc($border-radius * 2);
-    border: solid 2px var(--extra-muted-gray);
-    background-color: var(--primary-color-tp);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+}
+
+html[dir="rtl"] {
+  .header {
+    @media (min-width: $mobile-breakpoint) {
+      transform: translateX(calc(-50% - 1rem));
+    }
   }
 }

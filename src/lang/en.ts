@@ -3,6 +3,10 @@ const translation = {
 		en: "English",
 		fa: "فارسی",
 	},
+	nav: {
+		name: "Sina Fatemi",
+		altText: "Sina Lotfi Fatemi's Typography",
+	},
 	intro: {
 		firstName: "Sina",
 		lastName: "Fatemi",
@@ -56,5 +60,4 @@ const translation = {
 	},
 };
 
-// @ts-ignore
 export { translation };
