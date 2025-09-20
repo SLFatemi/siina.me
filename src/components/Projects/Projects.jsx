@@ -61,7 +61,7 @@ function Projects({ isLight }) {
 	];
 
 	return (
-		<div className={"section-container"} id={"Projects"}>
+		<div className={"section-container"} id={"projects"}>
 			<div className="section-name --projects">
 				{t("sections.projects.name")}
 			</div>

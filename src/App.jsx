@@ -51,13 +51,13 @@ function App() {
 	}, [isLight]);
 
 	const componentsArray = [
-		<TextSection id={"About"} key={"About"}>
+		<TextSection id={"about"} key={"About"}>
 			{{
 				name: t("sections.about.name"),
 				description: t("sections.about.description"),
 			}}
 		</TextSection>,
-		<TextSection id={"Education"} key={"Edu"}>
+		<TextSection id={"education"} key={"Edu"}>
 			{{
 				name: t("sections.education.name"),
 				description: t("sections.education.description"),

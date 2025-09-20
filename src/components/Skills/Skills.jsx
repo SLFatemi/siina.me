@@ -19,7 +19,7 @@ function Skills({ isLight }) {
 	const { t } = useTranslation();
 
 	return (
-		<div className={"section-container"} id={"Skills"}>
+		<div className={"section-container"} id={"skills"}>
 			<div className="section-name --skills">{t("sections.skills.name")}</div>
 			<section className="section --skills">
 				<div className="section-description">

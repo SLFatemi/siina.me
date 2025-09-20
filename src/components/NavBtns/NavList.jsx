@@ -2,20 +2,22 @@ import { useTranslation } from "../../i18n/i18nProvider.js";
 import styles from "./NavList.module.scss";
 
 function NavList() {
-	const { t } = useTranslation();
+	const { t, language } = useTranslation();
 	return (
-		<ul className={styles.list}>
+		<ul
+			className={`${styles.list} ${language === "fa" ? `secondary-font` : ""}`}
+		>
 			<li>
-				<a href={"#About"}>{t("nav.listAbout")}</a>
+				<a href={"#about"}>{t("nav.listAbout")}</a>
 			</li>
 			{/*<li>*/}
 			{/*	<a href={"#Education"}>education</a>*/}
 			{/*</li>*/}
 			<li>
-				<a href={"#Skills"}>{t("nav.listSkills")}</a>
+				<a href={"#skills"}>{t("nav.listSkills")}</a>
 			</li>
 			<li>
-				<a href={"#Projects"}>{t("nav.listProjects")}</a>
+				<a href={"#projects"}>{t("nav.listProjects")}</a>
 			</li>
 		</ul>
 	);
