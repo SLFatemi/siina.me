@@ -1,13 +1,17 @@
 import { FaGithub } from "react-icons/fa";
+import styles from "./Projects.module.scss";
 
 function GithubButton({ link }) {
-	const openInNewTab = () => {
-		window.open(link, "_blank", "noopener,noreferrer");
-	};
 	return (
-		<button onClick={openInNewTab} type={"button"}>
+		<a
+			className={styles.button}
+			href={link}
+			target={"_blank"}
+			rel="noopener noreferrer"
+			type={"button"}
+		>
 			<FaGithub size={20} />
-		</button>
+		</a>
 	);
 }
 

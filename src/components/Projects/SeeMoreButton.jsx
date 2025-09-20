@@ -4,18 +4,16 @@ import styles from "./Projects.module.scss";
 
 function SeeMoreButton({ link, isLight }) {
 	const { t } = useTranslation();
-	const openInNewTab = () => {
-		window.open(link, "_blank", "noopener,noreferrer");
-	};
 	return (
-		<button
-			onClick={openInNewTab}
-			type={"button"}
+		<a
+			href={link}
+			target={"_blank"}
+			rel="noopener noreferrer"
 			className={`${styles.seeMore} ${isLight ? "light" : "dark"}`}
 		>
 			<span className={"secondary-font"}>{t("projects.seeMoreOn")}</span>
 			<FaGithub size={28} />
-		</button>
+		</a>
 	);
 }
 

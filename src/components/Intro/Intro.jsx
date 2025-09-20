@@ -62,17 +62,29 @@ function Intro({ doneWriting, setDoneWriting, isLight }) {
 				{doneWriting && (
 					<ul className={styles.socialLinks}>
 						<li>
-							<a className="link" href="https://www.linkedin.com/in/sinafatemi">
+							<a
+								target={"_blank"}
+								rel="noopener noreferrer"
+								href="https://www.linkedin.com/in/sinafatemi"
+							>
 								<FaLinkedin className={styles.linkIcon} size={20} />
 							</a>
 						</li>
 						<li>
-							<a className="link" href="https://github.com/SLFatemi">
+							<a
+								target={"_blank"}
+								rel="noopener noreferrer"
+								href="https://github.com/SLFatemi"
+							>
 								<FaGithub className={styles.linkIcon} size={20} />
 							</a>
 						</li>
 						<li>
-							<a className="link" href="https://t.me//SLfatemi">
+							<a
+								target={"_blank"}
+								rel="noopener noreferrer"
+								href="https://t.me//SLfatemi"
+							>
 								<FaTelegram className={styles.linkIcon} size={20} />
 							</a>
 						</li>

@@ -60,7 +60,7 @@
     transition: variables.$transition-base;
   }
 
-  button {
+  .button {
     cursor: pointer;
     background: none;
     border: none;
@@ -87,6 +87,7 @@
 
 .seeMore {
   display: flex;
+  width: max-content;
   align-items: center;
   gap: 1.25rem;
   border: none;
