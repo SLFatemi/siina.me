@@ -61,16 +61,17 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
 		return value ? interpolate(value, vars) : path;
 	};
 
-	// biome-ignore lint/correctness/useExhaustiveDependencies: <idk>
-	const value = useMemo(() => ({ t, language, setLanguage }), [language]);
-
 	useEffect(() => {
 		document
 			.querySelector("html")
 			?.setAttribute("dir", localeDirections[language]);
 	}, [language]);
 
-	return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
+	return (
+		<I18nContext.Provider value={{ t, language, setLanguage }}>
+			{children}
+		</I18nContext.Provider>
+	);
 };
 
 export const useTranslation = () => {
