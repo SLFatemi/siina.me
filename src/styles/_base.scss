@@ -20,6 +20,11 @@ html[dir=rtl] {
   .secondary-font {
     font-family: 'IRANYekanX', sans-serif;
   }
+
+  * {
+    letter-spacing: 0 !important;
+  }
+
 }
 
 body {
