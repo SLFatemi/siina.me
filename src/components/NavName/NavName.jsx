@@ -1,8 +1,10 @@
 import nameTypography from "../../assets/NameTypography.svg";
 import { useTranslation } from "../../i18n/i18nProvider";
+import { useThemeStore } from "../../store/themeStore.js";
 import styles from "./NavName.module.scss";
 
-function NavName({ isLight }) {
+function NavName() {
+	const isLight = useThemeStore((store) => store.isLight);
 	const { t } = useTranslation();
 
 	return (

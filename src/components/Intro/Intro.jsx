@@ -5,9 +5,11 @@ import TypeIt from "typeit-react";
 import pfpDark from "../../assets/pfpDark.png";
 import pfpLight from "../../assets/pfpLight.png";
 import { useTranslation } from "../../i18n/i18nProvider.js";
+import { useThemeStore } from "../../store/themeStore.js";
 import styles from "./Intro.module.scss";
 
-function Intro({ doneWriting, setDoneWriting, isLight }) {
+function Intro({ doneWriting, setDoneWriting }) {
+	const isLight = useThemeStore((store) => store.isLight);
 	const { t, language } = useTranslation();
 	const [hasTyped, setHasTyped] = useState(false);
 

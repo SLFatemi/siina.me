@@ -14,6 +14,7 @@ import Projects from "./components/Projects/Projects.jsx";
 import Skills from "./components/Skills/Skills.jsx";
 import TextSection from "./components/TextSection/TextSection.jsx";
 import { useTranslation } from "./i18n/i18nProvider.js";
+import { useThemeStore } from "./store/themeStore.js";
 
 const glideInVariant = {
 	hidden: { opacity: 0, x: -30 },
@@ -22,12 +23,8 @@ const glideInVariant = {
 
 function App() {
 	const [doneWriting, setDoneWriting] = useState(false);
-	const [isLight, setIsLight] = useState(() => {
-		return localStorage.getItem("darkMode")
-			? JSON.parse(localStorage.getItem("darkMode"))
-			: false;
-	});
 
+	const isLight = useThemeStore((store) => store.isLight);
 	const { t, language } = useTranslation();
 
 	useEffect(() => {
@@ -38,16 +35,12 @@ function App() {
 		localStorage.setItem("darkMode", JSON.stringify(isLight));
 	}, [isLight]);
 
-	const bodyEl = useRef(document.querySelector("body"));
-
-	function handleChangeColorScheme() {
-		setIsLight((cur) => !cur);
-	}
+	const htmlEl = useRef(document.documentElement);
 
 	useEffect(() => {
 		!isLight
-			? bodyEl.current.classList.add("dark")
-			: bodyEl.current.classList.remove("dark");
+			? htmlEl.current.classList.add("dark")
+			: htmlEl.current.classList.remove("dark");
 	}, [isLight]);
 
 	const componentsArray = [
@@ -71,23 +64,16 @@ function App() {
 		<>
 			<Header>
 				<nav>
-					<NavName isLight={isLight} />
+					<NavName />
 					<NavList />
 					<NavBtns>
 						<ChangeLangButton />
-						<DarkModeButton
-							onChangeColorScheme={handleChangeColorScheme}
-							isLight={isLight}
-						/>
+						<DarkModeButton />
 					</NavBtns>
 				</nav>
 			</Header>
 			<div className="container">
-				<Intro
-					doneWriting={doneWriting}
-					setDoneWriting={setDoneWriting}
-					isLight={isLight}
-				/>
+				<Intro doneWriting={doneWriting} setDoneWriting={setDoneWriting} />
 				{doneWriting && (
 					<>
 						{componentsArray.map((Component, i) => (

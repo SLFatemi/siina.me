@@ -4,6 +4,26 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+    <!-- Prevent flash of wrong theme -->
+    <script>
+        (function() {
+            // Add preload class to prevent transitions during initial load
+            document.documentElement.classList.add('preload');
+
+            // Apply dark mode if needed
+            const darkMode = localStorage.getItem("darkMode");
+            const isLight = darkMode !== null ? JSON.parse(darkMode) : false;
+            if (!isLight) {
+                document.documentElement.classList.add('dark');
+            }
+
+            // Remove preload class after page loads to re-enable transitions
+            window.addEventListener('load', function() {
+                document.documentElement.classList.remove('preload');
+            });
+        })();
+    </script>
+
     <!-- English Meta Tags -->
     <meta name="description" content="Official portfolio of Sina Lotfi Fatemi, Frontend developer" lang="en">
     <meta name="author" content="Sina Lotfi Fatemi">

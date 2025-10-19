@@ -32,6 +32,11 @@ body {
   transition: background-color 0.3s;
 }
 
+// Prevent transitions on page load
+html.preload * {
+  transition: none !important;
+}
+
 a:visited, a:link, a:active {
   text-decoration: none;
 }
