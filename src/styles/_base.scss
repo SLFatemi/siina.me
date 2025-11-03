@@ -1,57 +1,58 @@
 // Base styles and resets
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: 10px;
-  overflow-x: hidden;
-  font-family: 'Georama', 'YekanBakh', sans-serif;
-  scroll-behavior: smooth;
+    font-size: 10px;
+    overflow-x: hidden;
+    font-family: "Georama", "YekanBakh", sans-serif;
+    scroll-behavior: smooth;
 
-  .secondary-font {
-    font-family: 'Figtree', sans-serif;
-  }
+    .secondary-font {
+        font-family: "Figtree", sans-serif;
+    }
 }
 
-html[dir=rtl] {
-  .secondary-font {
-    font-family: 'IRANYekanX', sans-serif;
-  }
+html[dir="rtl"] {
+    .secondary-font {
+        font-family: "IRANYekanX", sans-serif;
+    }
 
-  * {
-    letter-spacing: 0 !important;
-  }
-
+    * {
+        letter-spacing: 0 !important;
+    }
 }
 
 body {
-  background-color: var(--primary-color);
-  transition: background-color 0.3s;
+    background-color: var(--primary-color);
+    transition: background-color 0.3s;
 }
 
 // Prevent transitions on page load
 html.preload * {
-  transition: none !important;
+    transition: none !important;
 }
 
-a:visited, a:link, a:active {
-  text-decoration: none;
+a:visited,
+a:link,
+a:active {
+    text-decoration: none;
 }
 
 // Common animations
 @keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 100;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
 }
 
 // Utility classes
 .--hidden {
-  opacity: 0;
+    opacity: 0;
 }

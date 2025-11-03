@@ -1,23 +1,23 @@
 // Global CSS Variables and Theme Settings
 :root {
-  // Light theme colors
-  --primary-color: #f7f4ea;
-  --primary-color-tp: rgba(247, 244, 234, 0.8);
-  --secondary-color: rgba(198, 150, 112);
-  --main-white: #545e52;
-  --main-gray: #fefefd;
-  --muted-gray: #c6c3bb;
-  --extra-muted-gray: rgba(180, 177, 170, 0.5);
+    // Light theme colors
+    --primary-color: #f7f4ea;
+    --primary-color-tp: rgba(247, 244, 234, 0.8);
+    --secondary-color: rgba(198, 150, 112);
+    --main-white: #545e52;
+    --main-gray: #fefefd;
+    --muted-gray: #c6c3bb;
+    --extra-muted-gray: rgba(180, 177, 170, 0.5);
 }
 
 html.dark {
-  --primary-color: #232831;
-  --primary-color-tp: rgba(35, 40, 49, 0.8);
-  --secondary-color: #af83d0;
-  --main-white: #ebe2f4;
-  --main-gray: #191d24;
-  --muted-gray: #4b596c;
-  --extra-muted-gray: rgba(75, 89, 108, 0.5);
+    --primary-color: #232831;
+    --primary-color-tp: rgba(35, 40, 49, 0.8);
+    --secondary-color: #af83d0;
+    --main-white: #ebe2f4;
+    --main-gray: #191d24;
+    --muted-gray: #4b596c;
+    --extra-muted-gray: rgba(75, 89, 108, 0.5);
 }
 
 // SCSS Variables for consistent values

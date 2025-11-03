@@ -96,7 +96,8 @@ function Intro({ doneWriting, setDoneWriting }) {
 			<div
 				className={`${styles.description} ${!doneWriting ? styles.hidden : ""}`}
 			>
-				{t("intro.description")}
+				{t("intro.description")} @
+				<a href="https://oddrun.ir/">{t("intro.affiliate")}</a>
 			</div>
 		</section>
 	);

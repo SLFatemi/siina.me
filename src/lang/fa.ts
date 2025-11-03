@@ -18,6 +18,7 @@ const translation = {
 		cancel: "لغو",
 		ok: "تایید",
 		unknown: "نامشخص",
+		affiliate: " آدران",
 	},
 	sections: {
 		about: {

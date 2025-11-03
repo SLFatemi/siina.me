@@ -18,6 +18,7 @@ const translation = {
 		cancel: "Cancel",
 		ok: "OK",
 		unknown: "Unknown",
+		affiliate: " Oddrun",
 	},
 	sections: {
 		about: {
