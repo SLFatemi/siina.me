@@ -24,7 +24,7 @@ const translation = {
 		about: {
 			name: "About",
 			description:
-				"Hey 👋, I'm Sina a 19 y/o Software Engineer eager to learn more about Front-End technologies. I try to build interfaces that feel as good as they look, from pixel-perfect designs in Figma to live, responsive apps in the browser",
+				"Hey 👋, I'm Sina a 20 y/o Software Engineer eager to learn more about Front-End technologies. I try to build interfaces that feel as good as they look, from pixel-perfect designs in Figma to live, responsive apps in the browser",
 		},
 		education: {
 			name: "Education",
